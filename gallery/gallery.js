@@ -11,7 +11,7 @@ angular.module('poke.gallery', ['ngRoute', 'ui.bootstrap'])
 
   .controller('GalleryCtrl', ['$scope', '$http', 'filterFilter', function ($scope, $http, filterFilter) {
     var imgbaseurl = "images/";
-    var pokeapi = "http://pokeapi.co/api/v2/pokemon?limit=151"
+    var pokeapi = "https://pokeapi.co/api/v2/pokemon?limit=151"
 
     $http.get(pokeapi + "&callback=JSON_CALLBACK")
       .then(data => data.data.results.map((poke, i) => {
