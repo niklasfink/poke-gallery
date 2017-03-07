@@ -1,0 +1,27 @@
+<input id="searchbox" ng-model="search.key" placeholder="Search">
+<div id="pokecontainer">
+    <div class="pokebox" ng-repeat="poke in filterList | start: (currentPage - 1) * 20 | limitTo: 20">
+        <img class="img" ng-src="{{poke.img}}" />
+        <div class="id">#{{poke.id | numberformat}}</div>
+        <div class="name">{{poke.name}}</div>
+    </div>
+</div>
+
+<ul uib-pagination id="pagination" total-items="filterList.length" ng-model="currentPage" items-per-page="20"></ul>
+
+<div id="loader" ng-if="!pokemons" align="center" class="cssload-fond">
+    <div class="cssload-container-general">
+        <div class="cssload-internal">
+            <div class="cssload-ballcolor cssload-ball_1"> </div>
+        </div>
+        <div class="cssload-internal">
+            <div class="cssload-ballcolor cssload-ball_2"> </div>
+        </div>
+        <div class="cssload-internal">
+            <div class="cssload-ballcolor cssload-ball_3"> </div>
+        </div>
+        <div class="cssload-internal">
+            <div class="cssload-ballcolor cssload-ball_4"> </div>
+        </div>
+    </div>
+</div>
