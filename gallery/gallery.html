@@ -7,7 +7,7 @@
     </div>
 </div>
 
-<ul uib-pagination id="pagination" total-items="filterList.length" ng-model="currentPage" items-per-page="20"></ul>
+<ul ng-if="pokemons" uib-pagination id="pagination" total-items="filterList.length" ng-model="currentPage" items-per-page="20"></ul>
 
 <div id="loader" ng-if="!pokemons" align="center" class="cssload-fond">
     <div class="cssload-container-general">
