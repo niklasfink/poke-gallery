@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('poke.gallery', ['ngRoute', 'ui.bootstrap'])
+angular.module('poke.gallery', ['ngRoute', 'ui.bootstrap', 'ngAnimate'])
 
   .config(['$routeProvider', function ($routeProvider) {
     $routeProvider.when('/', {
