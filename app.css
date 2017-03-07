@@ -88,6 +88,10 @@
   #pokecontainer .pokebox .id{
     margin-top: 26px;
   }
+	#searchbox{
+		width: 240px;
+    margin-bottom: 5px;
+	}
 }
 
 /* Tablet */
